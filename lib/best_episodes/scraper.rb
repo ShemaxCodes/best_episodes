@@ -1,4 +1,4 @@
-class BestEpisodes::Scraper 
+class BestEpisodes::CLI::Scraper 
 
 @@episodes = []
 
@@ -10,7 +10,7 @@ doc =
 end 
 
 def self.scrape_episodes 
-    
+
 
 end 
 
