@@ -15,10 +15,17 @@ require 'pry'
 
         def self.scrape_show 
             binding.pry
-            get_page.css("#YWH273QDXVBTLBLL4ALSVSNUGU").text
+            episode_ten = get_page.css("#YWH273QDXVBTLBLL4ALSVSNUGU").text
+            episode_nine = get_page.css("#AO3JILON3REBZJVWSRGDX3A3AE").text
+            episode_eight = get_page.css("").text
+
             
         end 
+        
 
+        def self.scrape_description
+        nine_des = get_page.css("#KIZBKG6CYZFVRCASNDGHDSQGKY").text
+        end 
         Episode.scrape_show
         
     end 
