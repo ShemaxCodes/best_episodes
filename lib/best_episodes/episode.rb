@@ -1,4 +1,5 @@
 require 'open-uri'
+require 'nokogiri'
 require 'pry'
 
 #module BestEpisodes::CLI::Scraper 
@@ -18,7 +19,7 @@ require 'pry'
         def self.scrape_show 
             
             get_page.css("b")
-            #testing 
+            
         end 
 
         Episode.scrape_show
