@@ -5,7 +5,7 @@ require 'pry'
 #module BestEpisodes::CLI::Scraper 
 
     class Episode 
-        attr_accessor :title, :season, :episode_number 
+        #attr_accessor :title, :season, :episode_number 
         @@episodes = []
         def self.get_page
 
@@ -17,7 +17,14 @@ require 'pry'
             binding.pry
             episode_ten = get_page.css("#YWH273QDXVBTLBLL4ALSVSNUGU").text
             episode_nine = get_page.css("#AO3JILON3REBZJVWSRGDX3A3AE").text
-            episode_eight = get_page.css("").text
+            episode_eight = get_page.css("#3MNBSGSUDRBYXATINLS5UN6BAY").text
+            episode_seven = get_page.css("#QYJALQAZQVDABILM7ZYPMCGSM4").text
+            episode_six = get_page.css("#AGSSJRGXQBGK7GWJ7KZZNO4V5Y").text
+            episode_five = get_page.css("#C7ZH5AVICVFJVHC2NGNJSLYXDA").text
+            episode_four = get_page.css("#Z2I6XDNCO5GBZCWZ47DXAATIGM").text
+            episode_three = get_page.css("#SSH3W74PRNHQTOFIXFNJF6YZQY").text
+            episode_two = get_page.css("#SB3RUAFS7NBHXJJHONEU7G2NEM").text
+            episode_one = get_page.css("#ZUJRZJVXZNBXDNDDWQ5KUQU7GA").text
 
             
         end 
@@ -26,7 +33,7 @@ require 'pry'
         def self.scrape_description
         nine_des = get_page.css("#KIZBKG6CYZFVRCASNDGHDSQGKY").text
         end 
-        Episode.scrape_show
         
     end 
-#end 
+#end
+ Episode.scrape_show
