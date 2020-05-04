@@ -1,3 +1,6 @@
+require 'open-uri'
+require 'pry'
+
 class BestEpisodes::CLI::Scraper 
 
 @@episodes = []
@@ -7,10 +10,12 @@ html = open("https://www.cleveland.com/entertainment/2020/03/the-office-at-15-ra
 doc = Nokogiri::HTML(html)
 end 
 
-def self.scrape_episodes 
+def self.scrape_episode_title 
     self.get_page.css("")
 end 
 
 
+def self.scrape_episode_description
 
+end 
 end 

@@ -1,3 +1,6 @@
+require "../lib/scraper.rb"
+ 
+
 class BestEpisodes::CLI
 
 def call 
@@ -20,7 +23,7 @@ puts "Enter 1, 2, or 3 for your preferred show."
 end 
 
 def description
-   puts"
+   puts
 end 
 
 
