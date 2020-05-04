@@ -1,4 +1,4 @@
-require "../lib/scraper.rb"
+#require "../lib/episode.rb"
  
 
 class BestEpisodes::CLI
@@ -9,6 +9,7 @@ puts "Welcome to Best Episodes for Super Fans and Quarantine Binge Watchers!"
 puts "======================================================================"
 list_shows 
 menu
+list_episodes
 description
 go_back      
 end 
@@ -21,6 +22,11 @@ end
 def menu 
 puts "Enter 1, 2, or 3 for your preferred show."
 end 
+
+def list_episodes
+
+end 
+
 
 def description
    puts

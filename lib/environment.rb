@@ -1,6 +1,8 @@
+#require 'bundler'
 require 'nokogiri'
 require 'open-uri'
+require 'pry'
 
-require "best_episodes/version"
 
-require 'lib/best_episodes/cli'
+require_relative "./best_episodes/version"
+require_relative "./best_episodes/cli"

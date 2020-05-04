@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby 
-require "bundler/setup"
-require "environment.rb"
+#require "bundler/setup" 
+require_relative "../lib/environment.rb"
 
-puts "Hello World"
+#puts "Hello World"
 
 #BestEpisodes::CLI.new.call 
 
