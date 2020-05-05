@@ -16,10 +16,23 @@ require 'pry'
         def self.scrape_show 
            
             get_page.css("p.article__paragraph.article__paragraph--left").each do |el|
+                if el.include?("b")
+                    puts el  
+                end 
                 binding.pry
                 #get_page.css("p.article__paragraph.article__paragraph--left b")[5].text => "5. The Finale"
            end 
-          
+           if user_input == 1
+            puts 
+            get_page.css("#ZUJRZJVXZNBXDNDDWQ5KUQU7GA").text
+           end 
+
+
+
+
+
+
+
             #episode_ten = get_page.css("#YWH273QDXVBTLBLL4ALSVSNUGU").text
             #episode_nine = get_page.css("#AO3JILON3REBZJVWSRGDX3A3AE").text
             #episode_eight = get_page.css("#3MNBSGSUDRBYXATINLS5UN6BAY").text
@@ -34,6 +47,16 @@ require 'pry'
             
         end 
         
+
+
+
+
+
+
+
+
+
+
 
         def self.scrape_description
         nine_des = get_page.css("#KIZBKG6CYZFVRCASNDGHDSQGKY").text

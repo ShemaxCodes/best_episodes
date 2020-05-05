@@ -5,8 +5,8 @@ class BestEpisodes::CLI
 
 def call 
 
-puts "Welcome to Best Episodes for Super Fans and Quarantine Binge Watchers!"
-puts "======================================================================"
+puts "Welcome to Best Episodes for The Office Super Fans !"
+puts "===================================================="
 list_shows 
 menu
 list_episodes
