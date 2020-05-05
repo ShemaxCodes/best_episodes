@@ -15,11 +15,11 @@ require 'pry'
 
         def self.scrape_show 
            
-            #get_page.css("p.article__paragraph.article__paragraph--left").each do |el|
-            episode_ten = get_page.css("#YWH273QDXVBTLBLL4ALSVSNUGU").text
+            get_page.css("p.article__paragraph.article__paragraph--left").each do |el|
                 binding.pry
-           #end 
-
+                #get_page.css("p.article__paragraph.article__paragraph--left b")[5].text => "5. The Finale"
+           end 
+          
             #episode_ten = get_page.css("#YWH273QDXVBTLBLL4ALSVSNUGU").text
             #episode_nine = get_page.css("#AO3JILON3REBZJVWSRGDX3A3AE").text
             #episode_eight = get_page.css("#3MNBSGSUDRBYXATINLS5UN6BAY").text
