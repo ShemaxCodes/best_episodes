@@ -5,27 +5,30 @@ require 'pry'
 #module BestEpisodes::CLI::Scraper 
 
     class Episode 
-        #attr_accessor :title, :season, :episode_number 
-        @@episodes = []
+       
+       
+
         def self.get_page
 
             html = open("https://www.cleveland.com/entertainment/2020/03/the-office-at-15-ranking-the-10-best-episodes.html")
             doc = Nokogiri::HTML(html)
         end 
 
-        def self.scrape_show 
-           
-            get_page.css("p.article__paragraph.article__paragraph--left").each do |el|
-                if el.include?("b")
-                    puts el  
-                end 
-                binding.pry
+        def self.scrape_episode_list 
+            get_page.css("p.article__paragraph.article__paragraph--left b").each do |el|
+            el 
+            end 
+
+        end 
+                    binding.pry
+                
+               
                 #get_page.css("p.article__paragraph.article__paragraph--left b")[5].text => "5. The Finale"
-           end 
-           if user_input == 1
-            puts 
-            get_page.css("#ZUJRZJVXZNBXDNDDWQ5KUQU7GA").text
-           end 
+           
+           #if user_input == 1
+            #puts 
+            #get_page.css("#ZUJRZJVXZNBXDNDDWQ5KUQU7GA").text
+          #end 
 
 
 
@@ -45,7 +48,7 @@ require 'pry'
             #episode_one = get_page.css("#ZUJRZJVXZNBXDNDDWQ5KUQU7GA").text
          
             
-        end 
+        
         
 
 
@@ -64,4 +67,4 @@ require 'pry'
         
     end 
 #end
- Episode.scrape_show
+ Episode.scrape_episode_list
