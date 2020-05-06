@@ -16,7 +16,7 @@ class CLI
    end 
 #Asks user if they want to continue (y/n)
    def menu 
-      puts "Enter 1, 2, or 3 for your preferred show."
+      puts "Enter 'Y' for Yes - 'N' for No."
    end 
 
    def list_episodes

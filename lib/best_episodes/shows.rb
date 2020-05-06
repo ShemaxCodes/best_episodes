@@ -5,9 +5,9 @@ class Show
 
 
     def self.ep_list
-Title
+        get_page.css("p.article__paragraph.article__paragraph--left b").text #Title
 Description
-Watch link 
+Watch link
     end 
 
     def initialize(title, description)

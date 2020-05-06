@@ -28,26 +28,31 @@ require 'pry'
             ep_one = get_page.css("#ZUJRZJVXZNBXDNDDWQ5KUQU7GA").text
 
         end 
-                    binding.pry
+                   
                 
                
                 #get_page.css("p.article__paragraph.article__paragraph--left b")[5].text => "5. The Finale"
                 #this encapsulation only scraped the episode title, leaving out season and episode number
 
         def self.scrape_description_list
-        ten_des = get_page.css("#2H5WFESI2NFFHEFCZKABI7JKTU").text
-        nine_des = get_page.css("#KIZBKG6CYZFVRCASNDGHDSQGKY").text
-        eight_des = get_page.css("#5GJNNQRI6VHYBB2B227ZSEDZSA").text 
-        seven_des = get_page.css("#FSTAVKCFERDHNMZYLVGV5NR64Q").text 
-        six_des = get_page.css("#YZ4UQ6HDNVFQPGZNBLJO7XOCFM").text 
-        five_des = get_page.css("#SKLEHYF3NBH4FMB7RD6CLNSXXY").text 
-        four_des = get_page.css("#GO3NIJEGTRHIPOUJMQFSEOFCJI").text 
-        three_des = get_page.css("#SRBCNNMDABFDJHYSDUXUNS4DIA").text 
-        two_des = get_page.css("#Y2BMJR3WVJEYDEOI7FNHZQT4GE").text 
-        one_des = get_page.css("#54GZBIS5IBEPXHQFTLLUZULYYA").text 
+            #description = []
+                ten_des = get_page.css("#2H5WFESI2NFFHEFCZKABI7JKTU").text
+                nine_des = get_page.css("#KIZBKG6CYZFVRCASNDGHDSQGKY").text
+                eight_des = get_page.css("#5GJNNQRI6VHYBB2B227ZSEDZSA").text 
+                seven_des = get_page.css("#FSTAVKCFERDHNMZYLVGV5NR64Q").text 
+                six_des = get_page.css("#YZ4UQ6HDNVFQPGZNBLJO7XOCFM").text 
+                five_des = get_page.css("#SKLEHYF3NBH4FMB7RD6CLNSXXY").text 
+                four_des = get_page.css("#GO3NIJEGTRHIPOUJMQFSEOFCJI").text 
+                three_des = get_page.css("#SRBCNNMDABFDJHYSDUXUNS4DIA").text 
+                two_des = get_page.css("#Y2BMJR3WVJEYDEOI7FNHZQT4GE").text 
+                one_des = get_page.css("#54GZBIS5IBEPXHQFTLLUZULYYA").text 
+
+                    #description << ten_des
+                     #puts 
+                        #description
         end 
-        
+        binding.pry
 
     end 
 #end
- Episode.scrape_episode_list
+ Episode.scrape_description_list
