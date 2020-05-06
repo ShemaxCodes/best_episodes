@@ -7,14 +7,14 @@ class CLI
 
       puts "Welcome to Best Episodes for The Office Super Fans !"
       puts "====================================================" 
-          
+
    end 
 
 
-   def list_shows 
-      puts "1. The Office 2. Park and Rec 3. Brooklyn Nine-Nine"
+   def list_show 
+      puts "The Office"
    end 
-
+#Asks user if they want to continue (y/n)
    def menu 
       puts "Enter 1, 2, or 3 for your preferred show."
    end 
