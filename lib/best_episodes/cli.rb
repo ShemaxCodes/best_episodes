@@ -19,7 +19,7 @@ class CLI
       puts "Welcome to Best Episodes for The Office Super Fans !"
       puts "====================================================" 
       puts " "
-      puts "Please select the show by typing its number."
+      puts "Please select the show by entering its number."
       puts "1. The Office"
       puts " "
 
@@ -32,7 +32,7 @@ class CLI
          puts "**Best Episodes for The Office**"
          puts "================================="
          puts " "
-      else input < 1 
+      else input < 1 || > 1
          puts "Please try again."
       input = gets.chomp 
       end 
@@ -45,17 +45,23 @@ class CLI
    end 
 
 
-
-   def list_episodes
+   def list_episodes #Method that holds message and list of episodes for user selection 
+      message = "Enter the number of your desired episode for more info."
+      puts message 
       ep_ten = get_page.css("#YWH273QDXVBTLBLL4ALSVSNUGU").text
 
    end 
 
 
-   def description
+   def description 
       ten_des = get_page.css("#2H5WFESI2NFFHEFCZKABI7JKTU").text
    end 
 
+
+
+def list #Actual list of episodes 
+   ep_ten = get_page.css("#YWH273QDXVBTLBLL4ALSVSNUGU").text
+end 
 
    def go_back 
       puts "Type 'exit' to go back to the menu."
