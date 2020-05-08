@@ -4,31 +4,47 @@
 class CLI
 
    def call 
+     greeting 
+     menu 
+     list_episodes
+     description
+     goodbye 
+   end 
+   
+#Asks user if they want to continue (y/n)
+  
+   def greeting 
+
       puts " "
       puts "Welcome to Best Episodes for The Office Super Fans !"
       puts "====================================================" 
       puts " "
-      puts "Please select the show by its number."
+      puts "Please select the show by typing its number."
       puts "1. The Office"
       puts " "
-      @number = gets.chomp 
 
-      if @number == 1 
+   end 
+
+   def menu 
+      input = gets.chomp 
+
+      if input == 1 
          puts "**Best Episodes for The Office**"
          puts "================================="
-         puts ep_ten 
-         puts get_page.css("p.article__paragraph.article__paragraph--left b")[1].text
-         puts get_page.css("p.article__paragraph.article__paragraph--left b")[2].text
-         puts get_page.css("p.article__paragraph.article__paragraph--left b")[3].text
-         puts get_page.css("p.article__paragraph.article__paragraph--left b")[4].text
-      else 
+         puts " "
+      else input < 1 
          puts "Please try again."
+      input = gets.chomp 
+      end 
+
+      case input 
+      when "1"
+         list_episodes
+      end 
+
    end 
 
 
-   
-#Asks user if they want to continue (y/n)
-  
 
    def list_episodes
       ep_ten = get_page.css("#YWH273QDXVBTLBLL4ALSVSNUGU").text
