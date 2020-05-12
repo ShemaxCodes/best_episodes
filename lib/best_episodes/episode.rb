@@ -26,7 +26,7 @@ require 'pry'
             ep_three = get_page.css("#SSH3W74PRNHQTOFIXFNJF6YZQY").text
             ep_two = get_page.css("#SB3RUAFS7NBHXJJHONEU7G2NEM").text
             ep_one = get_page.css("#ZUJRZJVXZNBXDNDDWQ5KUQU7GA").text
-
+            title_array = [ep_one, ep_two, ep_three, ep_four, ep_five, ep_six, ep_seven, ep_eight, ep_nine, ep_ten]
         end 
                    
                 
@@ -46,7 +46,7 @@ require 'pry'
                 three_des = get_page.css("#SRBCNNMDABFDJHYSDUXUNS4DIA").text 
                 two_des = get_page.css("#Y2BMJR3WVJEYDEOI7FNHZQT4GE").text 
                 one_des = get_page.css("#54GZBIS5IBEPXHQFTLLUZULYYA").text 
-
+                description_array = [one_des, two_des, three_des, four_des, five_des, six_des, seven_des, eight_des, nine_des ten_des]
                     #description << ten_des
                      #puts 
                         #description

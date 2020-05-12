@@ -37,6 +37,7 @@ class CLI
       input = gets.chomp 
       end 
 
+
       case input 
       when "1"
          list_episodes
@@ -45,23 +46,24 @@ class CLI
    end 
 
 
-   def list_episodes #Method that holds message and list of episodes for user selection 
+   def list_episodes
+     Show.create_title_from_array(title_array)
+
       message = "Enter the number of your desired episode for more info."
       puts message 
-      ep_ten = get_page.css("#YWH273QDXVBTLBLL4ALSVSNUGU").text
+      input = gets.chomp 
+      while input != "exit"
+         if input > 0 && input < Show.all.length
+           episode = Show.all[input - 1]
 
    end 
 
 
-   def description 
-      ten_des = get_page.css("#2H5WFESI2NFFHEFCZKABI7JKTU").text
+   def descriptions 
+      
+     
    end 
 
-
-
-def list #Actual list of episodes 
-   ep_ten = get_page.css("#YWH273QDXVBTLBLL4ALSVSNUGU").text
-end 
 
    def go_back 
       puts "Type 'exit' to go back to the menu."

@@ -1,26 +1,47 @@
+require 'pry'
 
-class Show  
+class Show  #Objects 
 
     attr_accessor :title, :description
-
-
-    def self.ep_list #Incomplete created array 
-        ep_array = [get_page.css("#YWH273QDXVBTLBLL4ALSVSNUGU").text, get_page.css("#AO3JILON3REBZJVWSRGDX3A3AE").text,
-            ep_eight = get_page.css("#3MNBSGSUDRBYXATINLS5UN6BAY").text,
-            ep_seven = get_page.css("#QYJALQAZQVDABILM7ZYPMCGSM4").text,
-            ep_six = get_page.css("#AGSSJRGXQBGK7GWJ7KZZNO4V5Y").text,
-            ep_five = get_page.css("#C7ZH5AVICVFJVHC2NGNJSLYXDA").text,
-            ep_four = get_page.css("#Z2I6XDNCO5GBZCWZ47DXAATIGM").text,
-            ep_three = get_page.css("#SSH3W74PRNHQTOFIXFNJF6YZQY").text,
-            ep_two = get_page.css("#SB3RUAFS7NBHXJJHONEU7G2NEM").text,
-            ep_one = get_page.css("#ZUJRZJVXZNBXDNDDWQ5KUQU7GA").text]
-        puts ep_array
-    end 
+   ## teach your class how to keep track of its objects!! and make sure they get saved in initialize!!!
+    @@all = []
 
     def initialize(title, description)
-    @title = title 
-    @description = description
+        @title = title 
+        @description = description
+        @@all << self 
     end 
 
-    def 
+    def self.all 
+        @@all 
+    end 
+
+    def self.create_title_from_array(title_array)
+       
+        title_array.each { |ep| puts ep }
+    end  
 end 
+    binding.pry
+
+
+    def self.create_description_from_array(description_array)
+
+        description_array.each { |des| puts des }
+    end 
+end 
+
+    def self.find_by
+
+    end 
+       ## I'm passing in these two arrays
+       ## the KEY thing is that the arrays have the episodes in the samee order
+       ## I need to iterate over ONE of them
+       ## and make new shows using that informationPLUS the matching attribute in the second array
+       ## array.each do |something|
+       ## Show.new(title, descrioptn)
+       ##
+
+    
+  
+
+Show.create_from_array(title_array, description_array)
