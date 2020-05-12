@@ -11,7 +11,6 @@ class CLI
      goodbye 
    end 
    
-#Asks user if they want to continue (y/n)
   
    def greeting 
 
