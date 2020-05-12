@@ -16,19 +16,20 @@ class Show  #Objects
         @@all 
     end 
 
-    def self.create_title_from_array(title_array)
+    def self.create_from_array(title_array, description_array)
        
-        title_array.each { |ep| puts ep }
+        title_array.each_with_index do |t, i|    ## Could also use .zip, but titles must be separated from descriptions in CLI file
+            puts "#{t}, #{description_array[i]}"
     end  
 end 
     binding.pry
 
 
-    def self.create_description_from_array(description_array)
+    #def self.create_description_from_array(description_array)
 
-        description_array.each { |des| puts des }
-    end 
-end 
+        #description_array.each { |des| puts des }
+    #end 
+#end 
 
     def self.find_by
 
