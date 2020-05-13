@@ -51,8 +51,8 @@ require 'pry'
                      #puts 
                         #description
         end 
-        binding.pry
+        #binding.pry
 
     end 
 #end
- Episode.scrape_description_list
+Episode.scrape_description_list

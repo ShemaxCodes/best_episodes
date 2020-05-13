@@ -20,21 +20,17 @@ class Show  #Objects
        
         title_array.each_with_index do |t, i|    ## Could also use .zip, but titles must be separated from descriptions in CLI file
             puts "#{t}, #{description_array[i]}"
-    end  
-end 
-    binding.pry
 
-
-    #def self.create_description_from_array(description_array)
-
-        #description_array.each { |des| puts des }
-    #end 
-#end 
-
-    def self.find_by
-
+        
+        end  
     end 
-       ## I'm passing in these two arrays
+end 
+  
+
+
+
+
+        ## I'm passing in these two arrays
        ## the KEY thing is that the arrays have the episodes in the samee order
        ## I need to iterate over ONE of them
        ## and make new shows using that informationPLUS the matching attribute in the second array

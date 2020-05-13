@@ -5,7 +5,6 @@ class CLI
 
    def call 
      greeting 
-     menu 
      list_episodes
      description
      goodbye 
@@ -15,44 +14,25 @@ class CLI
    def greeting 
 
       puts " "
-      puts "Welcome to Best Episodes for The Office Super Fans !"
+      puts "Welcome to Best Episodes of The Office for Super Fans !"
       puts "====================================================" 
       puts " "
-      puts "Please select the show by entering its number."
-      puts "1. The Office"
+      puts list_episodes
       puts " "
 
    end 
 
-   def menu 
-      input = gets.chomp 
-
-      if input == 1 
-         puts "**Best Episodes for The Office**"
-         puts "================================="
-         puts " "
-      else input < 1 || > 1
-         puts "Please try again."
-      input = gets.chomp 
-      end 
-
-
-      case input 
-      when "1"
-         list_episodes
-      end 
-
-   end 
 
 
    def list_episodes
-     Show.create_title_from_array(title_array)
-
-      message = "Enter the number of your desired episode for more info."
-      puts message 
+      Show.create_title_from_array(title_array) #List of episodes for user to select from 
+      puts " "
+      puts "Enter the number corresponding with each episode title to get more information about each episode."
+      puts " "
+     
       input = gets.chomp 
       while input != "exit"
-         if input > 0 && input < Show.all.length
+         if input.to_i == 1 
            episode = Show.all[input - 1]
 
    end 
@@ -64,7 +44,12 @@ class CLI
    end 
 
 
+   def print_episodes
+
+
+   end 
+
    def go_back 
-      puts "Type 'exit' to go back to the menu."
+      puts "Type 'exit' to end or 'list' to go back to the menu."
    end 
 end 
