@@ -1,5 +1,4 @@
-#require "../lib/episode.rb"
- 
+#require "../lib/episode.
 
 class CLI
 
@@ -25,15 +24,39 @@ class CLI
 
 
    def list_episodes
-      Show.create_title_from_array(title_array) #List of episodes for user to select from 
+      Episode.get_page
+      titles = Episode.scrape_episode_list
+      descriptions = Episode.scrape_description_list
+      Show.create_from_array(titles, descriptions) 
+      #binding.pry
+      #Show.all holds all of my episode titles and descriptions 
+      ##Tell the object that I only need the titles to display 
+      #List of episodes for user to select from 
       puts " "
+
       puts "Enter the number corresponding with each episode title to get more information about each episode."
       puts " "
-     
+      puts go_back
+
       input = gets.chomp 
       while input != "exit"
          if input.to_i == 1 
-           episode = Show.all[input - 1]
+           puts #display description
+         elsif input.to_i == 2 
+
+         elsif input.to_i == 3 
+
+         elsif input.to_i == 4
+
+         elsif input.to_i == 5
+         
+         elsif input.to_i == 6 
+
+         elsif input.to_i == 7 
+         end 
+
+      end 
+
 
    end 
 

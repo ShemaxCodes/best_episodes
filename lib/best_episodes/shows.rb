@@ -18,9 +18,9 @@ class Show  #Objects
 
     def self.create_from_array(title_array, description_array)
        
-        title_array.each_with_index do |t, i|    ## Could also use .zip, but titles must be separated from descriptions in CLI file
-            puts "#{t}, #{description_array[i]}"
-
+        title_array.each_with_index do |t, i|    
+            
+        episode = Show.new(t, description_array[i])
         
         end  
     end 
@@ -41,4 +41,4 @@ end
     
   
 
-Show.create_from_array(title_array, description_array)
+#Show.create_from_array(title_array, description_array)

@@ -9,7 +9,7 @@ This CLI will provide the user with a list of shows (3).  From there, the user w
 3. Ask for the user input 
 4. Show the list of episodes for inputted show (SECOND LEVEL OF DATA)
 5. Ask for user input (to select the episode of choice)
-6. Based on user input, display description and url for more info (THIRD LEVEL OF DATA)
+6. Based on user input, display description for more info (THIRD LEVEL OF DATA)
 7. Ask for user input to return back to menu or list of episodes
 
 

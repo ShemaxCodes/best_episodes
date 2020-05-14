@@ -46,7 +46,7 @@ require 'pry'
                 three_des = get_page.css("#SRBCNNMDABFDJHYSDUXUNS4DIA").text 
                 two_des = get_page.css("#Y2BMJR3WVJEYDEOI7FNHZQT4GE").text 
                 one_des = get_page.css("#54GZBIS5IBEPXHQFTLLUZULYYA").text 
-                description_array = [one_des, two_des, three_des, four_des, five_des, six_des, seven_des, eight_des, nine_des ten_des]
+                description_array = [one_des, two_des, three_des, four_des, five_des, six_des, seven_des, eight_des, nine_des, ten_des]
                     #description << ten_des
                      #puts 
                         #description
@@ -55,4 +55,3 @@ require 'pry'
 
     end 
 #end
-Episode.scrape_description_list

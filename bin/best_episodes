@@ -4,6 +4,6 @@ require_relative "../lib/environment.rb"
 
 #puts "Hello World"
 
-#BestEpisodes::CLI.new.call 
+CLI.new.call 
 
 
