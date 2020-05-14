@@ -41,24 +41,47 @@ class CLI
       ##Tell the object that I only need the titles to display 
       #List of episodes for user to select from 
       
-      input = gets.strip.to_i 
+      input = gets.strip.to_i
+      #input2 = gets.chomp  
          while input != "exit"
          if input == 1 
+           puts titles[0]
            puts descriptions[0]
-           binding.pry
-           
-           #display description
-         elsif input.to_i == 2 
-
-         elsif input.to_i == 3 
-
-         elsif input.to_i == 4
-
-         elsif input.to_i == 5
-         
-         elsif input.to_i == 6 
-
-         elsif input.to_i == 7 
+           puts go_back 
+           binding.pry 
+         elsif input == 2 
+            puts titles[1]
+            puts descriptions[1]
+         elsif input == 3 
+            puts titles[2]
+            puts descriptions[2]
+            
+         elsif input == 4
+            puts titles[3]
+            puts descriptions[3]
+            #binding.pry
+         elsif input == 5
+            puts titles[4]
+            puts descriptions[4]
+         elsif input == 6 
+            puts titles[5]
+            puts descriptions[5]
+         elsif input == 7 
+            puts titles[6]
+            puts descriptions[6]
+         elsif input == 8
+            puts titles[7]
+            puts descriptions[7]
+         elsif input == 9
+            puts titles[8]
+            puts descriptions[8]
+         elsif input == 10 
+            puts titles[9]
+            puts descriptions[9]
+         else input == "exit" 
+            #break
+            puts goodbye
+            
          end 
 
       end 
@@ -75,12 +98,14 @@ class CLI
    end 
 
 
-   def print_episodes
-
-
-   end 
 
    def go_back 
       puts "Type 'exit' to end or 'list' to go back to the menu."
+   end 
+
+   def goodbye
+      puts ""
+      puts "Thanks for checking out the Best Episodes for The Office!"
+      puts ""
    end 
 end 
