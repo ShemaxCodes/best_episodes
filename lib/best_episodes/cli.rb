@@ -13,10 +13,13 @@ class CLI
    def greeting 
 
       puts " "
-      puts "Welcome to Best Episodes of The Office for Super Fans !"
-      puts "====================================================" 
       puts " "
-      puts list_episodes
+      puts "========================================================"
+      puts "Welcome to Best Episodes of The Office for Super Fans !"
+      puts "========================================================" 
+      puts " "
+      puts " "
+      puts "Searching for Titles..."
       puts " "
 
    end 
@@ -27,21 +30,24 @@ class CLI
       Episode.get_page
       titles = Episode.scrape_episode_list
       descriptions = Episode.scrape_description_list
-      Show.create_from_array(titles, descriptions) 
-      #binding.pry
-      #Show.all holds all of my episode titles and descriptions 
-      ##Tell the object that I only need the titles to display 
-      #List of episodes for user to select from 
+      Show.create_from_array(titles, descriptions)
+      puts titles  
       puts " "
 
       puts "Enter the number corresponding with each episode title to get more information about each episode."
       puts " "
-      puts go_back
-
-      input = gets.chomp 
-      while input != "exit"
-         if input.to_i == 1 
-           puts #display description
+      #binding.pry
+      #Show.all holds all of my episode titles and descriptions 
+      ##Tell the object that I only need the titles to display 
+      #List of episodes for user to select from 
+      
+      input = gets.strip.to_i 
+         while input != "exit"
+         if input == 1 
+           puts descriptions[0]
+           binding.pry
+           
+           #display description
          elsif input.to_i == 2 
 
          elsif input.to_i == 3 
@@ -62,7 +68,9 @@ class CLI
 
 
    def descriptions 
-      
+      #puts "Enter the number corresponding with each episode title to get more information about each episode."
+      #input = gets.chomp.to_i 
+
      
    end 
 
