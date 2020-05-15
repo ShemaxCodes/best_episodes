@@ -25,6 +25,7 @@ class CLI
    
 
    def list_episodes
+      puts " "
       puts "Office Trivia: What is the name of the Fun Run Michael held in Meredith's honor?"
       Episode.get_page
       titles = Episode.scrape_episode_list
@@ -38,47 +39,58 @@ class CLI
        
       
       input = gets.strip.to_i
+      #binding.pry
          if input == 1 
-           puts titles[0]
-           puts descriptions[0]
+           one = Show.all[0]
+           puts one.title
+           puts one.description
            go_back 
          elsif input == 2 
-            puts titles[1]
-            puts descriptions[1]
+            two = Show.all[1]
+            puts two.title
+            puts two.description
             go_back 
          elsif input == 3 
-            puts titles[2]
-            puts descriptions[2]
+            three = Show.all[2]
+            puts three.title 
+            puts three.description 
             go_back 
          elsif input == 4
-            puts titles[3]
-            puts descriptions[3]
-            go_back 
+            four = Show.all[3]
+            puts four.title
+            puts four.description
+            go_back
             #binding.pry
          elsif input == 5
-            puts titles[4]
-            puts descriptions[4]
+            five = Show.all[4]
+            puts five.title
+            puts five.description
             go_back 
             #binding.pry
          elsif input == 6 
-            puts titles[5]
-            puts descriptions[5]
+            six = Show.all[5]
+            puts six.title
+            puts six.description
             go_back 
          elsif input == 7 
-            puts titles[6]
-            puts descriptions[6]
+            sev = Show.all[6]
+            puts sev.title
+            puts sev.description
             go_back 
          elsif input == 8
-            puts titles[7]
-            puts descriptions[7]
+            e = Show.all[7]
+            puts e.title
+            puts e.description
             go_back 
          elsif input == 9
-            puts titles[8]
-            puts descriptions[8]
+            nine = Show.all[8]
+            puts nine.title
+            puts nine.description
             go_back 
          elsif input == 10 
-            puts titles[9]
-            puts descriptions[9]
+            ten = Show.all[9]
+            puts ten.title
+            puts ten.description
             go_back 
          else 
             false 
@@ -91,6 +103,7 @@ class CLI
 
    end 
 
+   
 
    def go_back 
       puts " "
