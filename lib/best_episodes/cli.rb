@@ -39,6 +39,7 @@ class CLI
        
       
       input = gets.strip.to_i
+      #if input > 0 && input <= Song.all.length
       #binding.pry
          if input == 1 
            one = Show.all[0]
