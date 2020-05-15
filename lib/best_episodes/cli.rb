@@ -22,9 +22,10 @@ class CLI
 
    end 
 
-
+   
 
    def list_episodes
+      puts "Office Trivia: What is the name of the Fun Run Michael held in Meredith's honor?"
       Episode.get_page
       titles = Episode.scrape_episode_list
       descriptions = Episode.scrape_description_list
@@ -34,14 +35,9 @@ class CLI
 
       puts "Enter the number corresponding with each episode title to get more information about each episode."
       puts " "
-      #binding.pry
-      #Show.all holds all of my episode titles and descriptions 
-      ##Tell the object that I only need the titles to display 
-      #List of episodes for user to select from 
+       
       
       input = gets.strip.to_i
-      #input2 = gets.chomp.downcase  
-         #while input != "exit" || input != "list"
          if input == 1 
            puts titles[0]
            puts descriptions[0]

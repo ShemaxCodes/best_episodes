@@ -29,8 +29,6 @@ require 'pry'
             title_array = [ep_one, ep_two, ep_three, ep_four, ep_five, ep_six, ep_seven, ep_eight, ep_nine, ep_ten]
         end 
                    
-                
-               
                 #get_page.css("p.article__paragraph.article__paragraph--left b")[5].text => "5. The Finale"
                 #this encapsulation only scraped the episode title, leaving out season and episode number
 
@@ -47,11 +45,9 @@ require 'pry'
                 two_des = get_page.css("#Y2BMJR3WVJEYDEOI7FNHZQT4GE").text 
                 one_des = get_page.css("#54GZBIS5IBEPXHQFTLLUZULYYA").text 
                 description_array = [one_des, two_des, three_des, four_des, five_des, six_des, seven_des, eight_des, nine_des, ten_des]
-                    #description << ten_des
-                     #puts 
-                        #description
+                  
         end 
         #binding.pry
 
     end 
-#end
+
