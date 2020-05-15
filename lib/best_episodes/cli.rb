@@ -42,13 +42,13 @@ class CLI
       #List of episodes for user to select from 
       
       input = gets.strip.to_i
-      #input2 = gets.chomp  
-         while input != "exit"
+      #input2 = gets.chomp.downcase  
+         while input != "exit" || input != "list"
          if input == 1 
            puts titles[0]
            puts descriptions[0]
-           puts go_back 
-           binding.pry 
+           go_back 
+           #binding.pry 
          elsif input == 2 
             puts titles[1]
             puts descriptions[1]
@@ -63,6 +63,7 @@ class CLI
          elsif input == 5
             puts titles[4]
             puts descriptions[4]
+            binding.pry
          elsif input == 6 
             puts titles[5]
             puts descriptions[5]
@@ -90,22 +91,28 @@ class CLI
    end 
 
 
-   def descriptions 
-      #puts "Enter the number corresponding with each episode title to get more information about each episode."
-      #input = gets.chomp.to_i 
-
-     
-   end 
-
-
-
    def go_back 
+      puts " "
+      puts " "
+      puts " "
       puts "Type 'exit' to end or 'list' to go back to the menu."
+      puts " "
+      puts " "
+      puts " "
+      input2 = gets.chomp.downcase 
+      case input2 
+      when "exit"
+         goodbye 
+      when "list"
+         list_episodes
+      end 
    end 
 
    def goodbye
-      puts ""
+      puts " "
+      puts "========================================================="
       puts "Thanks for checking out the Best Episodes for The Office!"
-      puts ""
+      puts "========================================================="
+      puts " "
    end 
 end 
