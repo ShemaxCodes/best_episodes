@@ -25,8 +25,6 @@ class CLI
    
 
    def list_episodes
-      puts " "
-      puts "Office Trivia: What is the name of the Fun Run Michael held in Meredith's honor?"
       Episode.get_page
       titles = Episode.scrape_episode_list
       descriptions = Episode.scrape_description_list
@@ -39,8 +37,6 @@ class CLI
        
       
       input = gets.strip.to_i
-      #if input > 0 && input <= Show.all.length
-      #binding.pry
          if input == 1 
            one = Show.all[0]
            puts one.title
