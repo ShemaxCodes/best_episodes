@@ -6,7 +6,7 @@ class CLI
      greeting 
      scraped_info
      display_episodes
-     list_episodes
+     #list_episodes
    end 
    
   
@@ -34,40 +34,36 @@ def scraped_info
    Show.create_from_array(titles, descriptions)
 end 
    
-   def display_episodes     
-      # 1. murder
-      #  2. Ocean
+   def display_episodes 
  
       Show.all.each {|a| puts "#{a.title}"}
-      list_episodes
+      list_descriptions
 
    end 
 
-   def list_episodes
+   def list_descriptions
        
       puts " "
 
       puts "Enter the number corresponding with each episode title to get more information about each episode."
       puts " "
-       
-      
-      input = gets.strip.to_i 
-         if input > 0 && input <= Show.all.length
-            show = Show.all.each_with_index {|a, b| puts "#{a.description}" if b == input-1}
-           #one = Show.all[0]
-           #puts one.title
-           #puts one.description
-           go_back
-            
-            
-         end 
-
-      #end 
-
-
+      user_input
+        
    end 
 
    
+   def user_input 
+
+      input = gets.strip.to_i 
+      if input > 0 && input <= Show.all.length 
+         show = Show.all.each_with_index {|a, b| puts "#{a.description}" if b == input-1}
+        go_back
+      else
+         puts "Please re-enter correct number."
+         list_descriptions
+      end 
+   end 
+
 
    def go_back 
       puts " "
