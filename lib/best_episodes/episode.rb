@@ -2,7 +2,7 @@ require 'open-uri'
 require 'nokogiri'
 require 'pry'
 
-#module BestEpisodes::CLI::Scraper 
+
 
 #This file acts as the Scraper file 
     class Episode 

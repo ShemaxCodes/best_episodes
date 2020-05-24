@@ -1,9 +1,11 @@
 #require "../lib/episode.
-
+require 'pry'
 class CLI
 
    def call 
      greeting 
+     scraped_info
+     display_episodes
      list_episodes
    end 
    
@@ -19,78 +21,43 @@ class CLI
       puts " "
       puts "Searching for Titles..."
       puts " "
+   end 
+   # create a display epidoes method. This method is goign to go to your show class and iterate through it and display all of the show titles with their corresponding index + 1 
+   # crewat a method that hoplds all four of those lines and call it in your call method. 
+   # ask the user to select a numer, that number corresponds to the index that episode belongs to so you're able to 
+   # when you type LIST in terminal it loops back to the liste_episodes 
+
+def scraped_info 
+   Episode.get_page
+   titles = Episode.scrape_episode_list
+   descriptions = Episode.scrape_description_list
+   Show.create_from_array(titles, descriptions)
+end 
+   
+   def display_episodes     
+      # 1. murder
+      #  2. Ocean
+ 
+      Show.all.each {|a| puts "#{a.title}"}
+      list_episodes
 
    end 
 
-   
-
    def list_episodes
-      Episode.get_page
-      titles = Episode.scrape_episode_list
-      descriptions = Episode.scrape_description_list
-      Show.create_from_array(titles, descriptions)
-      puts titles  
+       
       puts " "
 
       puts "Enter the number corresponding with each episode title to get more information about each episode."
       puts " "
        
       
-      input = gets.strip.to_i
-         if input == 1 
-           one = Show.all[0]
-           puts one.title
-           puts one.description
-           go_back 
-         elsif input == 2 
-            two = Show.all[1]
-            puts two.title
-            puts two.description
-            go_back 
-         elsif input == 3 
-            three = Show.all[2]
-            puts three.title 
-            puts three.description 
-            go_back 
-         elsif input == 4
-            four = Show.all[3]
-            puts four.title
-            puts four.description
-            go_back
-            #binding.pry
-         elsif input == 5
-            five = Show.all[4]
-            puts five.title
-            puts five.description
-            go_back 
-            #binding.pry
-         elsif input == 6 
-            six = Show.all[5]
-            puts six.title
-            puts six.description
-            go_back 
-         elsif input == 7 
-            sev = Show.all[6]
-            puts sev.title
-            puts sev.description
-            go_back 
-         elsif input == 8
-            e = Show.all[7]
-            puts e.title
-            puts e.description
-            go_back 
-         elsif input == 9
-            nine = Show.all[8]
-            puts nine.title
-            puts nine.description
-            go_back 
-         elsif input == 10 
-            ten = Show.all[9]
-            puts ten.title
-            puts ten.description
-            go_back 
-         else 
-            false 
+      input = gets.strip.to_i 
+         if input > 0 && input <= Show.all.length
+            show = Show.all.each_with_index {|a, b| puts "#{a.description}" if b == input-1}
+           #one = Show.all[0]
+           #puts one.title
+           #puts one.description
+           go_back
             
             
          end 
@@ -112,10 +79,10 @@ class CLI
       puts " "
       input2 = gets.chomp.downcase 
       case input2 
-      when "exit"
+         when "exit"
          goodbye 
-      when "list"
-         list_episodes
+         when "list"
+         display_episodes
       end 
    end 
 
